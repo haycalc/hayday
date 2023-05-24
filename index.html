@@ -24,7 +24,7 @@
         'butter': { 'ingredients': {'milk': 2}, marketPrice: 82 },
         'pig_feed': { 'ingredients': {'carrots': 2, 'soybean': 1}, marketPrice: 14 },
         'cream': { 'ingredients': {'milk': 1}, marketPrice: 50 },
-        'cookie': { 'ingredients': {'brown_sugar': 1, 'egg': 2, 'wheat': 2}, marketPrice: 104 },
+        'cookie': { 'ingredients': {'brown_sugar': 1, 'egg': 2, 'wheat': 2}, marketPrice: null },
         'egg': { 'ingredients': {'chicken_feed': 1}, marketPrice: 18 },
         'milk': { 'ingredients': {'cow_feed': 1}, marketPrice: 32 }
       };
@@ -83,7 +83,24 @@
 <body>
   <h1>Hay Day Production Cost Calculator</h1>
   <label for="item">Item:</label>
-  <input type="text" id="item" placeholder="Enter item name">
+  <select id="item">
+    <option value="wheat">Wheat</option>
+    <option value="corn">Corn</option>
+    <option value="soybean">Soybean</option>
+    <option value="sugar_cane">Sugarcane</option>
+    <option value="chicken_feed">Chicken Feed</option>
+    <option value="cow_feed">Cow Feed</option>
+    <option value="brown_sugar">Brown Sugar</option>
+    <option value="corn_bread">Corn Bread</option>
+    <option value="popcorn">Popcorn</option>
+    <option value="pancake">Pancake</option>
+    <option value="butter">Butter</option>
+    <option value="pig_feed">Pig Feed</option>
+    <option value="cream">Cream</option>
+    <option value="cookie">Cookie</option>
+    <option value="egg">Egg</option>
+    <option value="milk">Milk</option>
+  </select>
   <button onclick="calculateProductionCost()">Calculate</button>
   <p id="result"></p>
 </body>
