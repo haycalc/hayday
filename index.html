@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hay Day Production Cost Calculator</title>
+  <script>
+    function calculateProductionCost() {
+      var tier1_prices = {
+        'wheat': 3,
+        'corn': 7,
+        'soybean': 10,
+        'sugar_cane': 14
+      };
+
+      var tier2_items = {
+        'chicken_feed': {'ingredients': {'corn': 1, 'wheat': 2}},
+        'cow_feed': {'ingredients': {'corn': 1, 'soybean': 2}},
+        'brown_sugar': {'ingredients': {'sugar_cane': 1}}
+      };
+
+      var tier3_items = {
+        'corn_bread': {'ingredients': {'corn': 2, 'egg': 2}},
+        'popcorn': {'ingredients': {'corn': 2}},
+        'pancake': {'ingredients': {'brown_sugar': 1, 'egg': 3, 'wheat': 2}},
+        'butter': {'ingredients': {'milk': 2}},
+        'pig_feed': {'ingredients': {'carrots': 2, 'soybean': 1}},
+        'cream': {'ingredients': {'milk': 1}},
+        'cookie': {'ingredients': {'brown_sugar': 1, 'egg': 2, 'wheat': 2}},
+        'egg': {'ingredients': {'chicken_feed': 1}},
+        'milk': {'ingredients': {'cow_feed': 1}}
+      };
+
+      function calculateProductionCost(item) {
+        if (item in tier1_prices) {
+          return tier1_prices[item];
+        }
+
+        if (item in tier2_items) {
+          var total_cost = 0;
+          for (var ingredient in tier2_items[item]['ingredients']) {
+            if (tier2_items[item]['ingredients'].hasOwnProperty(ingredient)) {
+              total_cost += calculateProductionCost(ingredient) * tier2_items[item]['ingredients'][ingredient];
+            }
+          }
+          return total_cost;
+        }
+
+        if (item in tier3_items) {
+          var total_cost = 0;
+          for (var ingredient in tier3_items[item]['ingredients']) {
+            if (tier3_items[item]['ingredients'].hasOwnProperty(ingredient)) {
+              total_cost += calculateProductionCost(ingredient) * tier3_items[item]['ingredients'][ingredient];
+            }
+          }
+          return total_cost;
+        }
+
+        return 0;
+      }
+
+      var item = document.getElementById("item").value;
+
+      var cost = calculateProductionCost(item);
+
+      var resultElement = document.getElementById("result");
+      resultElement.textContent = "The production cost of " + item + " is " + cost + " coins.";
+    }
+  </script>
+</head>
+<body>
+  <h1>Hay Day Production Cost Calculator</h1>
+  <label for="item">Item:</label>
+  <input type="text" id="item" placeholder="Enter item name">
+  <button onclick="calculateProductionCost()">Calculate</button>
+  <p id="result"></p>
+</body>
+</html>
