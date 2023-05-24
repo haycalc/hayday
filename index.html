@@ -5,33 +5,33 @@
   <script>
     function calculateProductionCost() {
       var tier1_prices = {
-        'wheat': 3,
-        'corn': 7,
-        'soybean': 10,
-        'sugar_cane': 14
+        'wheat': { cost: 3, marketPrice: 5 },
+        'corn': { cost: 7, marketPrice: 10 },
+        'soybean': { cost: 10, marketPrice: 12 },
+        'sugar_cane': { cost: 14, marketPrice: 18 }
       };
 
       var tier2_items = {
-        'chicken_feed': {'ingredients': {'corn': 1, 'wheat': 2}},
-        'cow_feed': {'ingredients': {'corn': 1, 'soybean': 2}},
-        'brown_sugar': {'ingredients': {'sugar_cane': 1}}
+        'chicken_feed': { 'ingredients': {'corn': 1, 'wheat': 2}, marketPrice: 7 },
+        'cow_feed': { 'ingredients': {'corn': 1, 'soybean': 2}, marketPrice: 14 },
+        'brown_sugar': { 'ingredients': {'sugar_cane': 1}, marketPrice: 32 }
       };
 
       var tier3_items = {
-        'corn_bread': {'ingredients': {'corn': 2, 'egg': 2}},
-        'popcorn': {'ingredients': {'corn': 2}},
-        'pancake': {'ingredients': {'brown_sugar': 1, 'egg': 3, 'wheat': 2}},
-        'butter': {'ingredients': {'milk': 2}},
-        'pig_feed': {'ingredients': {'carrots': 2, 'soybean': 1}},
-        'cream': {'ingredients': {'milk': 1}},
-        'cookie': {'ingredients': {'brown_sugar': 1, 'egg': 2, 'wheat': 2}},
-        'egg': {'ingredients': {'chicken_feed': 1}},
-        'milk': {'ingredients': {'cow_feed': 1}}
+        'corn_bread': { 'ingredients': {'corn': 2, 'egg': 2}, marketPrice: 72 },
+        'popcorn': { 'ingredients': {'corn': 2}, marketPrice: 32 },
+        'pancake': { 'ingredients': {'brown_sugar': 1, 'egg': 3, 'wheat': 2}, marketPrice: 108 },
+        'butter': { 'ingredients': {'milk': 2}, marketPrice: 82 },
+        'pig_feed': { 'ingredients': {'carrots': 2, 'soybean': 1}, marketPrice: 14 },
+        'cream': { 'ingredients': {'milk': 1}, marketPrice: 50 },
+        'cookie': { 'ingredients': {'brown_sugar': 1, 'egg': 2, 'wheat': 2}, marketPrice: 104 },
+        'egg': { 'ingredients': {'chicken_feed': 1}, marketPrice: 18 },
+        'milk': { 'ingredients': {'cow_feed': 1}, marketPrice: 32 }
       };
 
       function calculateProductionCost(item) {
         if (item in tier1_prices) {
-          return tier1_prices[item];
+          return tier1_prices[item].cost;
         }
 
         if (item in tier2_items) {
@@ -60,9 +60,23 @@
       var item = document.getElementById("item").value;
 
       var cost = calculateProductionCost(item);
+      var marketPrice = null;
+      if (tier1_prices[item]) {
+        marketPrice = tier1_prices[item].marketPrice;
+      } else if (tier2_items[item]) {
+        marketPrice = tier2_items[item].marketPrice;
+      } else if (tier3_items[item]) {
+        marketPrice = tier3_items[item].marketPrice;
+      }
+
+      var profit = marketPrice !== null ? marketPrice - cost : null;
 
       var resultElement = document.getElementById("result");
-      resultElement.textContent = "The production cost of " + item + " is " + cost + " coins.";
+      if (marketPrice !== null) {
+        resultElement.textContent = "The production cost of " + item + " is " + cost + " coins. The market price is " + marketPrice + " coins. The profit is " + profit + " coins.";
+      } else {
+        resultElement.textContent = "The production cost of " + item + " is " + cost + " coins. The market price is not available. Profit cannot be calculated.";
+      }
     }
   </script>
 </head>
