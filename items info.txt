@@ -1,0 +1,104 @@
+tier 1:  
+Fish fillet        54    N/A 
+Sesame             18   N/A
+Apple              39    N/A
+Cherry             68    N/A
+Raspberry          46    N/A
+Potato             36   N/A
+Blackberry         82    N/A
+Strawberry         50    N/A 
+Coffee bean        64   N/A
+Blackberry         82    N/A
+Coffee bean        64   N/A
+tier 2,3:
+Bacon              50    Pig feed (1)
+Bacon and eggs     201   Bacon (2) Egg (4)
+Cheese             122   Milk (3)
+Indigo             25    Indigo (1)
+White sugar        50    Sugarcane (2)
+Carrot pie         82    Carrots (3) Egg (1) Wheat (2)
+Pumpkin            32    Pumpkin (1)
+Pumpkin pie        158   Egg (1)Pumpkin (3)Wheat (2)\
+Sheep feed         14    Soybean (1)Wheat (3)
+Wool               54    Sheep feed (1)
+Buttered popcorn   126   Butter (1)Corn (2)
+Sweater            151   Wool (2)
+Cotton             28    Cotton (1)
+Bacon pie          219   Bacon (3)Egg (1)Wheat (2)
+Syrup              90    Sugarcanes (4)
+Cotton fabric      108   Cotton (3)
+Hamburger          180   Bacon (2) Bread (2)
+
+Raspberry muffin   140   Egg (1) Raspberries (2) Wheat (2)
+Blue woolly hat    111   Indigo (1)Wool (1)
+Cotton shirt       241   Cotton fabrics (2)
+Blue sweater       208   Indigo (2)Wool (2)
+Carrot cake        165   Brown sugar (1)Butter (1)Carrot (2)
+Wooly chaps        309   Cotton fabric (1)Wool (3)
+
+Cream cake         219   Cream (1)White sugar (1)Wheat (5)
+Red berry cake     255   Cherries (2) Egg (1)Milk (1) Raspberry (1)
+Cheesecake         284   Cheese (1) Cookie (1)
+Chili pepper       36    Chili pepper (1)
+Chili popcorn      122   Chili peppers (2)Corn (2)
+Violet dress       327   Cotton fabrics (2)Indigo (1)Raspberry (1)
+
+Blackberry muffin	 226   Blackberries (2)Egg (2)Wheat (1)
+Carrot juice       46    Carrots (3)
+Fish burger        226   Bread (2)Chili pepper (1)Fish fillets (2)
+
+Apple pie          270   Apples (3)Egg (1)Syrup (1)Wheat (2)
+Fish pie	       226   Egg (1) Fish fillets (3)Wheat (2)
+Apple juice        129   Apples (2)
+Vanilla ice cream  172   Cream (1)Milk (1)White sugar (1)\
+Tomato             43    Tomato (1)
+Roasted tomatoes   118   Tomatoes (2)
+Cherry juice       216   Cherries (2)
+Tomato juice       162   Tomatoes (3)
+Berry juice        205   Blackberry (1)Raspberry (1)
+Goat feed          14    Carrots (2)Corn (1)Wheat (1)
+Goat milk          64    Goat Feed (1)
+Goat cheese        162   Goat milk (2)
+Pizza              190   Cheese (1)Tomato (1)Wheat (2)
+Cherry popsicle    352   Cherry juice (1)Syrup (1)
+
+Feta pie     223   Egg (1)Goat cheese (1)Wheat (2)
+Strawberry ice cream 331 Cream (1)Milk (1)Strawberries (3)White sugar (1) 
+
+Strawberry cake    316  Cream (1) Strawberries (2)Wheat (3)White sugar (1)
+Baked potato       298  Cheese (1) Chili pepper (1) Cream (1) Potato (2)
+Sesame ice cream   176  Cream (1)Sesame (3)Brown Sugar (1)
+
+Strawberry jam     270  Strawberries (3)
+Pumpkin soup       392  Butter (1)Carrot (2)Honey (1)Pumpkin (3)
+Rustic bouquet     208  Wheat (5)Indigo (3)Cotton (3)
+Strawberry candle  370  Beeswax (1)Strawberries (2)
+Beeswax            234  Honeycombs (3)
+
+Red scarf          288  Strawberries (2)Wool (2)
+Hot chocolate      316  Cacao (2)Cream (1)Milk (1) White sugar (1)
+Raspberry mocha    259  Cacao (1)Coffee bean (1)Cream (1) Raspberry (1)
+Caffè mocha        291  Coffee bean (1)Cream (1) Cacao (2)
+Frutti di Mare pizza 403 Cheese (1)Fish fillet (1)Lobster tail (1)Wheat (2)
+
+Chocolate popcorn  248  Cacao (2) Corn (2)
+Caffè latte        219  Coffee beans (2)Milk (1) White sugar (1)
+Honey apple cake   482  Apples (2)Egg (2)Honey (2) Wheat (2)
+Espresso           248  Coffee beans (3)White sugar (1)
+
+Fish and chips     244  Fish fillets (2)Potato (3)
+Honey popcorn      360  Corn (2)Honey (2)
+Honey              154  Honeycombs (2)
+Chocolate ice cream 342 Cream (1)Cacao (2)Milk (1)White sugar (1)
+Shepherd's pie     280  Bacon (2)Carrot (2)Potato (2)Pumpkin (2)
+Potato bread       284  Butter (1)Egg (3)Potato (2)White sugar (1)
+Cherry jam         334  Cherries (3)
+Potato feta cake   309  Eggs (4)Goat cheese (1)Potato (1)
+Blackberry jam     388  Blackberries (3)
+Spicy pizza        226  Cheese (1)Chili pepper (1)Tomato (1)Wheat (2)
+Raspberry jam      252  Raspberries (3)
+
+Casserole          367  Bacon (2)Cheese (1)Egg (2)Potato (2)
+Chocolate cake     320  Brown sugar (1)Butter (1)Cacao (2)
+Apple jam          219  Apples (3) 
+
