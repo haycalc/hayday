@@ -24,7 +24,8 @@ var tier1_prices = {
         'indigo': { cost: 25, marketPrice: 25 },
         'chili_pepper': { cost: 36, marketPrice: 36 },
         'tomato': { cost: 43, marketPrice: 43 },
-        'honeycombs': { cost: 68, marketPrice: 68 }
+        'honeycombs': { cost: 68, marketPrice: 68 },
+        'Cacao': { cost: 86, marketPrice: 86 }
       };
 
 var tier2_items = {
@@ -131,15 +132,7 @@ var tier2_items = {
           return total_cost;
         }
 
-        if (item in tier3_items) {
-          var total_cost = 0;
-          for (var ingredient in tier3_items[item]['ingredients']) {
-            if (tier3_items[item]['ingredients'].hasOwnProperty(ingredient)) {
-              total_cost += calculateProductionCost(ingredient) * tier3_items[item]['ingredients'][ingredient];
-            }
-          }
-          return total_cost;
-        }
+
 
         return 0;
       }
@@ -183,6 +176,94 @@ var tier2_items = {
     <option value="cookie">Cookie</option>
     <option value="egg">Egg</option>
     <option value="milk">Milk</option>
+    <option value="chicken_feed">Chicken Feed</option>
+    <option value="cow_feed">Cow Feed</option>
+    <option value="brown_sugar">Brown Sugar</option>
+    <option value="corn_bread">Corn Bread</option>
+    <option value="popcorn">Popcorn</option>
+    <option value="pancake">Pancake</option>
+    <option value="butter">Butter</option>
+    <option value="pig_feed">Pig Feed</option>
+    <option value="cream">Cream</option>
+    <option value="cookie">Cookie</option>
+    <option value="egg">Egg</option>
+    <option value="milk">Milk</option>
+    <option value="bacon">Bacon</option>
+    <option value="bacon_and_eggs">Bacon and Eggs</option>
+    <option value="cheese">Cheese</option>
+    <option value="white_sugar">White Sugar</option>
+    <option value="carrot_pie">Carrot Pie</option>
+    <option value="pumpkin_pie">Pumpkin Pie</option>
+    <option value="sheep_feed">Sheep Feed</option>
+    <option value="wool">Wool</option>
+    <option value="buttered_popcorn">Buttered Popcorn</option>
+    <option value="sweater">Sweater</option>
+    <option value="bacon_pie">Bacon Pie</option>
+    <option value="syrup">Syrup</option>
+    <option value="cotton_fabric">Cotton Fabric</option>
+    <option value="hamburger">Hamburger</option>
+    <option value="raspberry_muffin">Raspberry Muffin</option>
+    <option value="blue_woolly_hat">Blue Woolly Hat</option>
+    <option value="cotton_shirt">Cotton Shirt</option>
+    <option value="blue_sweater">Blue Sweater</option>
+    <option value="carrot_cake">Carrot Cake</option>
+    <option value="wooly_chaps">Wooly Chaps</option>
+    <option value="cream_cake">Cream Cake</option>
+    <option value="red_berry_cake">Red Berry Cake</option>
+    <option value="cheesecake">Cheesecake</option>
+    <option value="chili_popcorn">Chili Popcorn</option>
+    <option value="violet_dress">Violet Dress</option>
+    <option value="blackberry_muffin">Blackberry Muffin</option>
+    <option value="carrot_juice">Carrot Juice</option>
+    <option value="fish_burger">Fish Burger</option>
+    <option value="apple_pie">Apple Pie</option>
+    <option value="fish_pie">Fish Pie</option>
+    <option value="apple_juice">Apple Juice</option>
+    <option value="vanilla_ice_cream">Vanilla Ice Cream</option>
+    <option value="roasted_tomatoes">Roasted Tomatoes</option>
+    <option value="cherry_juice">Cherry Juice</option>
+    <option value="tomato_juice">Tomato Juice</option>
+    <option value="berry_juice">Berry Juice</option>
+    <option value="goat_feed">Goat Feed</option>
+    <option value="goat_milk">Goat Milk</option>
+    <option value="goat_cheese">Goat Cheese</option>
+    <option value="pizza">Pizza</option>
+    <option value="cherry_popsicle">Cherry Popsicle</option>
+    <option value="feta_pie">Feta Pie</option>
+    <option value="strawberry_ice_cream">Strawberry Ice Cream</option>
+    <option value="strawberry_cake">Strawberry Cake</option>
+    <option value="baked_potato">Baked Potato</option>
+    <option value="sesame_ice_cream">Sesame Ice Cream</option>
+    <option value="strawberry_jam">Strawberry Jam</option>
+    <option value="pumpkin_soup">Pumpkin Soup</option>
+    <option value="rustic_bouquet">Rustic Bouquet</option>
+    <option value="strawberry_candle">Strawberry Candle</option>
+    <option value="beeswax">Beeswax</option>
+    <option value="red_scarf">Red Scarf</option>
+    <option value="hot_chocolate">Hot Chocolate</option>
+    <option value="raspberry_mocha">Raspberry Mocha</option>
+    <option value="caffe_mocha">Caffe Mocha</option>
+    <option value="frutti_di_mare_pizza">Frutti di Mare Pizza</option>
+    <option value="chocolate_popcorn">Chocolate Popcorn</option>
+    <option value="caffe_latte">Caffe Latte</option>
+    <option value="honey_apple_cake">Honey Apple Cake</option>
+    <option value="espresso">Espresso</option>
+    <option value="fish_and_chips">Fish and Chips</option>
+    <option value="honey_popcorn">Honey Popcorn</option>
+    <option value="honey">Honey</option>
+    <option value="chocolate_ice_cream">Chocolate Ice Cream</option>
+    <option value="shepherds_pie">Shepherd's Pie</option>
+    <option value="potato_bread">Potato Bread</option>
+    <option value="cherry_jam">Cherry Jam</option>
+    <option value="potato_feta_cake">Potato Feta Cake</option>
+    <option value="blackberry_jam">Blackberry Jam</option>
+    <option value="spicy_pizza">Spicy Pizza</option>
+    <option value="raspberry_jam">Raspberry Jam</option>
+    <option value="casserole">Casserole</option>
+    <option value="chocolate_cake">Chocolate Cake</option>
+    <option value="apple_jam">Apple Jam</option>
+
+
   </select>
   <button onclick="calculateProductionCost()">Calculate</button>
   <p id="result"></p>
